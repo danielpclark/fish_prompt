@@ -101,6 +101,8 @@ function fish_prompt
       set -l dirty "$cyan ✔"
       set repo_info "$repo_info$dirty"
     end
+  else
+    set repo_info $blue" #$normal:"
   end
 
   echo -n -s $cwd $repo_info $normal ' '
